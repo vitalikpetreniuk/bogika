@@ -236,15 +236,8 @@ function initAccordion(){
     return false;
   });
   $('.accordion-mobile-opener').on('click', function() {
-    if($(this).closest('li').hasClass('open')){
-      $(this).closest('li').removeClass('open');
-      $(this).closest('li').find('.accordion-mobile-slide').slideUp();
-    } else {
-      $(this).closest('.accordion-mobile').find('.accordion-mobile-slide').slideUp();
-      $(this).closest('.accordion-mobile').find('li').removeClass('open');
-      $(this).closest('li').addClass('open');
-      $(this).closest('li').find('.accordion-mobile-slide').slideDown();
-    }
+    $(this).closest('.accordion-mobile > li').toggleClass('open');
+    $(this).siblings('.accordion-mobile-slide').slideToggle();
     return false;
   });
 }
