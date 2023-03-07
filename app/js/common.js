@@ -3,9 +3,7 @@ $(function() {
   initFixedHeader();
   initHeaderSearch();
   initOpenBasket();
-  initOpenSubMenu();
   initMobileNav();
-  initlangSwitcher();
   initSpinner();
   initSlickSlider();
   initSlickSlider2();
@@ -64,21 +62,6 @@ function initOpenBasket(){
     event.stopPropagation();
   });
 };
-function initOpenSubMenu(){
-  if(window.matchMedia("screen and (max-width: 1024px)").matches==true) {
-    $(".nav-menu > li > a").attr("data-count", "0");
-    $(".nav-menu > li > a").on("click", function(){ 
-    var clickCount = $(this).attr("data-count");
-    clickCount ++;
-      if (clickCount == 1) {
-        $(this).attr("data-count", clickCount);
-        return false
-      } else {
-        return true;
-      }
-    });
-  }
-};
 function initMobileNav(){
   $('.mob-btn').on('click', function(){
     $(this).closest('#nav').toggleClass('active');
@@ -92,25 +75,6 @@ function initMobileNav(){
     event.stopPropagation();
   });
 };
-function initlangSwitcher(){
-  $('.lang-opener').on('click', function(event) {
-    event.preventDefault();
-    $(this).closest('.lang').toggleClass('drop-active');
-    $(this).parent().find('.lang-drop').slideToggle(200);
-  });
-  $(document).click(function(event) {
-    if ($(event.target).closest('.lang').length) return;
-    $('.lang').removeClass('drop-active');
-    $('.lang-drop').slideUp(200);
-    event.stopPropagation();
-  });
-  $('.lang-drop a').click(function(){
-    $('.lang-opener').html($(this).html());
-    $('.lang').removeClass('drop-active');
-    $('.lang-drop').slideUp(200);
-    return false;
-  });
-}
 function initSpinner() {
   if ($('.spinner').length) {
     $('.spinner').spinner({
@@ -221,6 +185,11 @@ function initOpenBlock(){
     $(this).siblings('.expanded').slideToggle();
     return false;
   });
+  $('.nav-menu .arrow-down').on('click', function() {
+    $(this).closest('.menu-item-has-children').toggleClass('open');
+    $(this).siblings('.nav-menu .sub-menu').slideToggle();
+    return false;
+  });
 }
 function initAccordion(){
   $('.accordion .opener').on('click', function() {
@@ -253,6 +222,8 @@ function initScrollBtn(){
 function initAnchorMenu(){
   $(".page-navigation").on("click","a", function (event) {
     event.preventDefault();
+    $(".page-navigation li").removeClass('active');
+    $(this).parent().addClass('active');
     var id  = $(this).attr('href'),
      top = $(id).offset().top - 120;
     $('body,html').animate({scrollTop: top}, 1000);
