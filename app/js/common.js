@@ -20,6 +20,8 @@ $(function() {
   initTabs();
 });
 
+$ = jQuery;
+
 function initCloseBlock(){
   $('.close-block').on('click', function(){
     $('.top-bar').css('display','none');
