@@ -495,12 +495,14 @@
 							<form action="#" method="post">
 								<div class="rating-stars flexbox">
 									<div class="rating-text">Ваша оцінка:</div>
-									<div class="stars">
-										<span class="star-full">star</span>
-										<span class="star-full">star</span>
-										<span class="star-full">star</span>
-										<span class="star-full">star</span>
-										<span class="star-empty">star</span>
+									<div class="stars" id="ratingForm">
+										  <fieldset class="use-stars-rating">
+										    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="5 stars"></label>
+										    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="4 stars"></label>
+										    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="3 stars"></label>
+										    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="2 stars"></label>
+										    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="1 star"></label>
+										</fieldset>
 									</div>
 								</div>
 								<div class="container-form flexbox">
@@ -577,6 +579,7 @@
 	</div>
 	<div id="overlay"></div>
 	<script src="js/scripts.min.js"></script>
+	<script src="js/jquery-3.6.4.min.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script src="js/jquery.ui.touch-punch.js"></script>
 	<script src="js/slick.js"></script>

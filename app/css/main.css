@@ -2132,7 +2132,7 @@ section{
 .rating-stars .rating-text{
 	font-size: 16px;
 	line-height: 24px;
-	margin: 0 6px 0 0;
+	margin: 0 9px 0 0;
 }
 .rating-info .title{
 	font-size: 20px;
@@ -2209,7 +2209,7 @@ section{
 	padding-right: 15px;
 }
 .user-form-block .user-form{
-	max-width: 676px;
+	width: 676px;
 }
 .blog-section h2{
 	margin: 0 0 25px;
@@ -3424,6 +3424,33 @@ section{
 .return-product h1{
 	margin: 0 0 35px;
 }
+.use-stars-rating > input{
+	display: none;
+} 
+.use-stars-rating > label{
+	float: right;
+	margin: 5px 2px -2px;
+	position: relative;
+}
+.use-stars-rating > label:before { 
+	content: '';
+  background: url(../img/icon-star-empty.svg) no-repeat;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+.use-stars-rating > input:checked ~ label:before,
+.use-stars-rating:not(:checked) > label:hover:before,
+.use-stars-rating:not(:checked) > label:hover ~ label:before,
+.use-stars-rating > input:checked + label:hover:before,
+.use-stars-rating > input:checked ~ label:hover:before,
+.use-stars-rating > label:hover ~ input:checked ~ label:before,
+.use-stars-rating > input:checked ~ label:hover ~ label:before{
+	background: url(../img/icon-star-full.svg) no-repeat;
+}
+.use-stars-rating:not(:checked) > label:hover:before{
+	opacity: 0.8;
+}
 @media (prefers-reduced-motion:no-preference){:root{scroll-behavior:auto}}
 @media (min-width: 1766px) {
 	.about-goods .text{
@@ -3906,7 +3933,6 @@ section{
 		padding-top: 50px;
 	}
 	.user-form-block .user-form{
-		max-width: 100%;
 		width: 100%;
 	}
 	.blog-post-content figure, 
