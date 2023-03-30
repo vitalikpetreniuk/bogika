@@ -1162,6 +1162,12 @@ section{
 	text-transform: uppercase;
 	margin: 0 0 4px;
 }
+.goods-list .goods-box a.title{
+	text-decoration: none;
+}
+.goods-list .goods-box a.title:hover{
+	color: #C54B38;
+}
 .goods-list .goods-box .promotion-text{
 	position: absolute;
 	top: 12px;
@@ -1189,6 +1195,7 @@ section{
 	background: url(../img/icon-heart-empty.svg) no-repeat;
 }
 .goods-list .wrap-img{
+	display: block;
 	margin: 35px auto 5px;
 	height: 190px;
 	text-align: center;

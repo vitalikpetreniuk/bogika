@@ -257,26 +257,16 @@ function initTabs(){
       return false;
   });
 }
-function initRatingStars(){
-  const form = document.getElementById('ratingForm');
-  form.onsubmit = function(e) {
-    e.preventDefault();
-    const valueStars = document.querySelector('input[name="rating"]:checked').value;
-    showThankyou(valueStars);
-  }
-  function showThankyou(val) {
-    const starText = val > 1 ? 'stars' : 'star';
-    const panel = document.querySelector('.panel');
-  }
-  function handleChange() {
-    const inputRatings = document.querySelectorAll('input[name="rating"]');    
-    inputRatings.forEach(input => {
-      input.addEventListener('change', () => {
-        if (input.checked === true) {
-          submitBtn.disabled = false;
-        }
-      })
-    })
-  }
-  handleChange();
+function initRatingStars() {
+  ratingForm = document.getElementById("ratingForm");
+  if(ratingForm)
+    document.getElementById("ratingForm").onsubmit = function (e) {
+        e.preventDefault();
+        document.querySelector('input[name="rating"]:checked').value;
+        document.querySelector(".panel")
+    }, document.querySelectorAll('input[name="rating"]').forEach((e => {
+    e.addEventListener("change", (() => {
+        !0 === e.checked && (submitBtn.disabled = !1)
+    }))
+  }))
 }
