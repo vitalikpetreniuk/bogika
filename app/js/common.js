@@ -301,7 +301,7 @@ function initCustomTextarea(){
   });
 }
 function initTabs(){
-  $('.tabset .tab-control').on('click', 'li:not(.active)', function() {
+  $('body').on('click', '.tabset .tab-control li:not(.active)', function() {
     $(this)
       .addClass('active').siblings().removeClass('active')
       .closest('.tabset').find('.tab').removeClass('active').eq($(this).index()).addClass('active');
