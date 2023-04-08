@@ -234,6 +234,10 @@ function initOpenBlock(){
     $(this).siblings('.custom-select.multiple .filter-options-item').slideToggle();
     return false;
   });
+  $('.product-info-description .reviews-list-block .btn').on('click', function() {
+    $('.product-info-description .reviews-list-block').addClass('open');
+    return false;
+  });
 }
 function initAccordion(){
   $('.accordion .opener').on('click', function() {

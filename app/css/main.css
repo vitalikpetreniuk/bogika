@@ -252,6 +252,19 @@ input:disabled:-ms-input-placeholder{
 .form-search input:-ms-input-placeholder{
 	color: #AE927D;
 }
+.search-result-section .form-search input::-webkit-input-placeholder{
+	color: #96460A;
+}
+.search-result-section .form-search input::-moz-placeholder{
+	opacity: 1;
+	color: #96460A;
+}
+.search-result-section .form-search input:-moz-placeholder{
+	color: #96460A;
+}
+.search-result-section .form-search input:-ms-input-placeholder{
+	color: #96460A;
+}
 .list{
 	padding: 0;
 	margin: 0 0 48px;
@@ -2117,7 +2130,7 @@ section{
 	padding: 4px 16px;
 }
 .page-navigation a:hover,
-.page-navigation .active a{
+.page-navigation .active{
 	background: #BD663A;
 	color: #F2E4CF;
 }
@@ -3733,6 +3746,122 @@ section{
 .header-main .basket-item-quantity .woocommerce-Price-currencySymbol{
 	margin-left: -3px;
 }
+.error-section{
+	padding: 10vh 0;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+.error-section .text{
+	width: 390px;
+}
+.error-section .img-error{
+	margin: 0 0 15px;
+}
+.error-section p{
+	margin: 0 0 40px;
+}
+.error-section .btn{
+	font-size: 14px;
+	line-height: 20px;
+	min-width: 206px;
+}
+.registration-section{
+	text-align: center;
+	padding: 0 0 44px;
+}
+.registration-section h1 {
+    margin: 0 0 65px;
+}
+.registration-section .user-form{
+	max-width: 424px;
+	padding: 43px 67px 55px;
+	margin: 0 auto;
+}
+.registration-section .user-form .wrap-input {
+    margin: 0 0 27px;
+}
+.registration-section .user-form .button{
+	text-align: center;
+	margin: 39px 0 8px;
+}
+.registration-section .user-form .btn,
+.registration-section .btn_submit{
+	min-width: 206px;
+}
+.form-bottom-link{
+	text-align: center;
+}
+.forgot-password-link{
+	text-align: right;
+}
+.forgot-password-link a{
+	display: inline-block;
+	padding: 4px 0 0;
+}
+.registration-section .user-form-text{
+	padding: 34px 30px;
+}
+.registration-section .user-form-text p:last-child{
+	margin: 0 0 15px;
+}
+.search-result-section .form-search{
+	max-width: 350px;
+	margin: 0 0 30px;
+}
+.search-result-section .form-search input{
+	background: none;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+	border-bottom: 1px solid #96460A;
+	max-width: 310px;
+	padding: 7px 0 0;
+	font-size: 16px;
+	line-height: 16px;
+	color: #96460A;
+}
+.search-result-section .form-search button{
+	top: 4px;
+	right: 4px;
+}
+.search-result-section h1{
+	margin: 0;
+}
+.search-result-list{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.search-result-list li{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 0;
+	border-bottom: 1px solid #E6D3B9;
+}
+.search-result-list .text{
+	max-width: 680px;
+}
+.search-result-list .text p:last-child{
+	margin: 0;
+}
+.search-result-list .wrap-img{
+	width: 300px;
+	height: 216px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+	background: #fcefdc;
+	overflow: hidden;
+}
+.search-result-list .wrap-img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 @media (prefers-reduced-motion:no-preference){:root{scroll-behavior:auto}}
 @media (min-width: 1766px) {
 	.about-goods .text{
@@ -3845,6 +3974,12 @@ section{
 	.goods-list .wrap-img img {
 	    max-height: 100%;
 	    width: auto;
+	}
+	.error-section{
+		padding-top: 100px;
+	}
+	.search-result-list .text{
+		padding-right: 15px;
 	}
 }
 @media (max-width: 1023px) {
@@ -4034,7 +4169,7 @@ section{
 		margin: 0 0 22px;
 	}
 	.content-page {
-		padding-bottom: 80px;
+		padding-bottom: 50px;
 	}
 	.info-delivery-services{
 		font-size: 14px;
@@ -4506,6 +4641,12 @@ section{
 		text-align: right;
 		margin: 0;
 		font-weight: 500;
+	}
+	.registration-section{
+		padding: 0;
+	}
+	.search-result-list .text {
+	    max-width: 58%;
 	}
 }
 @media (max-width: 767px) {
@@ -5311,6 +5452,38 @@ section{
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 	}
+	.registration-section h1{
+		max-width: 100%;
+		margin: 0 0 35px;
+	}
+	.registration-section .user-form{
+		padding-left: 42px;
+		padding-right: 42px;
+	}
+	.registration-section .user-form-text{
+		padding: 32px;
+	}
+	.search-result-section h1{
+		max-width: 100%;
+	}
+	.search-result-section .form-search input{
+		padding: 16px 0 0;
+	}
+	.search-result-section .form-search button{
+		top: 10px;
+	    width: 38px;
+	    height: 33px;
+	}
+	.search-result-list li{
+		padding: 32px 0;
+	}
+	.search-result-list .text{
+		max-width: 100%;
+		padding: 0 0 39px;
+	}
+	.search-result-list .wrap-img{
+		margin: 0 auto;
+	}
 }
 @media (max-width: 479px) {
 	.social-slider .wrap-img{
@@ -5325,5 +5498,23 @@ section{
 	.goods-list .price del[aria-hidden="true"] .amount bdi{
 		font-size: 10px;
 		line-height: 8px;
+	}
+	.error-section {
+	    padding-top: 147px;
+	    padding-bottom: 118px;
+	}
+	.error-section .img-error{
+		width: 163px;
+		height: 59px;
+		margin: 0 0 26px;
+	}
+	.error-section p {
+	    margin: 0 0 27px;
+	}
+	.registration-section h1{
+		text-align: left;
+	}
+	.search-result-list .wrap-img{
+		height: 210px;
 	}
 }
