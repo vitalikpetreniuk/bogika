@@ -22,6 +22,7 @@ $(document).ready(function() {
   initTabs();
   initRatingStars();
   initLightBox();
+  initVerticalScroll();
 });
 
 function initCloseBlock(){
@@ -234,10 +235,6 @@ function initOpenBlock(){
     $(this).siblings('.custom-select.multiple .filter-options-item').slideToggle();
     return false;
   });
-  $('.product-info-description .reviews-list-block .btn').on('click', function() {
-    $('.product-info-description .reviews-list-block').addClass('open');
-    return false;
-  });
 }
 function initAccordion(){
   $('.accordion .opener').on('click', function() {
@@ -305,7 +302,7 @@ function initCustomTextarea(){
   });
 }
 function initTabs(){
-  $('.tabset .tab-control').on('click', 'li:not(.active)', function() {
+  $('body').on('click', '.tabset .tab-control li:not(.active)', function() {
     $(this)
       .addClass('active').siblings().removeClass('active')
       .closest('.tabset').find('.tab').removeClass('active').eq($(this).index()).addClass('active');
@@ -330,4 +327,10 @@ function initLightBox(){
     'resizeDuration': 200,
     'wrapAround': true
   })
+}
+function initVerticalScroll() {
+  $(".mCustomScrollbar").mCustomScrollbar({
+    axis:"y",
+    advanced:{autoExpandHorizontalScroll:false}
+  });
 }
