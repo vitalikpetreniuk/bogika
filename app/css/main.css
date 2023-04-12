@@ -1228,13 +1228,13 @@ section{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 35px auto 5px;
-	height: 190px;
+	margin: 35px auto 15px;
+	height: 180px;
 	text-align: center;
 	position: relative;
 }
 .goods-list .wrap-img img{
-	max-height: 190px;
+	max-height: 180px;
 }
 .goods-list .price{
 	position: absolute;
@@ -4276,7 +4276,7 @@ section{
 		display: block;
 	}
 	.goods-select-sort-button.mobile .btn{
-		padding: 8px;
+		padding: 10px;
 	}
 	.goods-select-block .custom-select-block-mobile{
 		display: flex;
@@ -5564,7 +5564,7 @@ section{
 		height: 172px;
 	}
 	.goods-select-sort-button.mobile .btn{
-		padding: 8px 2px;
+		padding: 10px 2px;
 	}
 	.goods-list .price{
 		font-size: 13px;
