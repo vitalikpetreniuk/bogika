@@ -568,6 +568,9 @@ input.btn:hover,
 	text-decoration: none;
 	color: inherit;
 }
+.header-user-info a:hover{
+	background-color: #F4C55C;
+}
 .header-user-info a.ui-spinner-button{
 	width: 20px;
 	height: 20px;
@@ -1428,6 +1431,16 @@ section{
 }
 .email-block-text .user-form .btn:hover{
 	border-color: #BD663A;
+}
+.email-block-section.thanks .email-block-text{
+	max-width: 100%;
+	height: 115px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.email-block-section.thanks p{
+	margin: 0;
 }
 /* FORM */
 .user-form{
@@ -3725,22 +3738,19 @@ section{
 	height: 1px;
 	background: #96460A;
 }
-.reviews-list-block .comment-respond{
+/* .reviews-list-block .comment-respond{
 	display: none;
-}
+} */
 .reviews-list-block.open .comment-respond{
 	display: block;
 }
 .header-main .product-remove{
-	right: 15px;
-	width: 32px;
-	height: 32px;
-	border-radius: 50px;
-	padding: 6px 0;
-	text-align: center;
+	right: 33px;
+	width: 16px;
+	height: 16px;
 }
-.header-main .product-remove:hover{
-	background-color: #F4C55C;
+.header-main .product-remove a:hover{
+	background: url(../img/icon-close.svg) no-repeat;
 }
 .header-main .basket-item-quantity .woocommerce-Price-currencySymbol{
 	margin-left: -3px;
@@ -3836,6 +3846,7 @@ section{
 }
 .search-result-section .form-search button:hover{
 	background: url(../img/icon-search.svg) no-repeat;
+	background-position: 50% 50%;
 }
 .search-result-section h1{
 	margin: 0;
@@ -4029,6 +4040,11 @@ section{
 	}
 	.search-result-list .text{
 		padding-right: 15px;
+	}
+}
+@media (width: 1024px) and (height: 1366px) {
+	.error-section{
+		padding: 26vh 0 0;
 	}
 }
 @media (max-width: 1023px) {
@@ -5532,6 +5548,9 @@ section{
 	}
 	.search-result-list .wrap-img{
 		margin: 0 auto;
+	}
+	.email-block-section.thanks .email-block-text{
+		height: 70px;
 	}
 }
 @media (max-width: 479px) {
