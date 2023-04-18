@@ -611,7 +611,7 @@ input.btn:hover,
 .btn-basket:hover .basket-num{
 	background: #F4C55C;
 }
-.header-user-info-basket.active .basket-services-box{
+.open-basket .basket-services-box{
 	display: block;
 	animation: openright 3s;
 	animation-direction: alternate;
@@ -647,6 +647,7 @@ input.btn:hover,
 }
 .open-basket,
 .open-nav{
+	position: relative;
 	overflow: hidden;
 }
 .open-basket #overlay{
@@ -1863,7 +1864,8 @@ section{
 /* CUSTOM CHECKBOX */
 .checkbox-container,
 .filter--style-premmerce .filter__checkgroup-title {
-	display: block;
+	display: inline-block;
+	max-width: 200px;
 	position: relative;
 	padding-left: 25px;
 	margin-bottom: 16px;
@@ -3257,6 +3259,7 @@ section{
 }
 .gallery-slider .slider-nav .slick-track{
 	display: flex;
+	justify-content: center;
 	align-items: center;
 	margin: 0 auto;
 }
@@ -3410,6 +3413,9 @@ section{
 }
 .product-info-description .short-content{
 	max-width: 700px;
+}
+.product-info-description .tabset .btn.default{
+	display: none;
 }
 .product-info-description .tab-control li{
 	margin: 0 54px 22px 0;
@@ -4101,7 +4107,7 @@ th.label .woo-selected-variation-item-name{
 }
 .filter__checkgroup-body,
 .filter__checkgroup-aside{
-	display: block;
+	display: inline-block;
 }
 @media (prefers-reduced-motion:no-preference){:root{scroll-behavior:auto}}
 @media (min-width: 1281px) {
@@ -4119,6 +4125,10 @@ th.label .woo-selected-variation-item-name{
 		padding-left: 0;
 		padding-right: 33%;
 	}
+	.slider .wrap-img{
+		min-height: 760px;
+		height: 0;
+	}
 }
 @media (min-width: 1921px) {
 	.about-goods .text{
@@ -4126,6 +4136,10 @@ th.label .woo-selected-variation-item-name{
 	}
 	.about-goods.image-right .text{
 		padding-right: 27%;
+	}
+	.slider .wrap-img{
+		min-height: 940px;
+		height: 0;
 	}
 }
 @media (max-width: 1209px) {
@@ -4277,7 +4291,7 @@ th.label .woo-selected-variation-item-name{
 	.header-user-info .header-user-info-lang{
 		display: none;
 	}
-	.header-user-info-basket.active .basket-services-box,
+	.open-basket .basket-services-box,
 	#overlay{
 		animation: openright 0s;
 	}
@@ -4414,7 +4428,8 @@ th.label .woo-selected-variation-item-name{
 		margin: 0;
 	}
 	.social-section .social-link{
-		position: static;
+		position: relative;
+		right: 0;
 		display: inline-block;
 		font-size: 20px;
 		line-height: 32px;
@@ -5078,9 +5093,16 @@ th.label .woo-selected-variation-item-name{
 		overflow: hidden;
 	}
 	.goods-list .price{
-		bottom: 75px;
+		bottom: 65px;
 		font-size: 16px;
 		line-height: 16px;
+	}
+	.goods-list .goods-box .btn,
+	.goods-list .goods-box:hover .btn{
+		bottom: 30px;
+	}
+	.goods-list .goods-box .added_to_cart{
+		bottom: 7px;
 	}
 	.goods-list .btn{
 		min-width: 112px;

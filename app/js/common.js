@@ -30,7 +30,7 @@ function initCloseBlock(){
     $('.top-bar').css('display','none');
     $('body').toggleClass('no-top-bar');
     return false;
-  })
+  });
 }
 function initFixedHeader() {
   window.onscroll = function() {myFunction()};
