@@ -55,15 +55,15 @@ function initHeaderSearch() {
   });
 }
 function initOpenBasket(){
-  $('.btn-basket').on('click', function(){
+  $('body').on('click', '.btn-basket', function(){
     $(this).closest('.basket-box').toggleClass('active');
-    $('body').toggleClass('open-basket');
+    $('body').toggleClass('open-basket').trigger('mini_cart_open');
     return false;
   });
   $(document).click(function(event) {
     if ($(event.target).closest(".basket-box .basket-services-box").length) return;
     $(".basket-box").removeClass('active');
-    $('body').removeClass('open-basket');
+    $('body').removeClass('open-basket').trigger('mini_cart_close');
     event.stopPropagation();
   });
 };
