@@ -56,13 +56,13 @@ function initHeaderSearch() {
 }
 function initOpenBasket(){
   $('.btn-basket').on('click', function(){
-    $(this).closest('.basket-box').toggleClass('active');
+    $(this).closest('li.header-user-info-basket').toggleClass('active');
     $('body').toggleClass('open-basket');
     return false;
   });
   $(document).click(function(event) {
-    if ($(event.target).closest(".basket-box .basket-services-box").length) return;
-    $(".basket-box").removeClass('active');
+    if ($(event.target).closest("li.header-user-info-basket .basket-services-box").length) return;
+    $("li.header-user-info-basket").removeClass('active');
     $('body').removeClass('open-basket');
     event.stopPropagation();
   });

@@ -611,7 +611,7 @@ input.btn:hover,
 .btn-basket:hover .basket-num{
 	background: #F4C55C;
 }
-.basket-box.active .basket-services-box{
+.header-user-info-basket.active .basket-services-box{
 	display: block;
 	animation: openright 3s;
 	animation-direction: alternate;
@@ -4256,7 +4256,7 @@ section{
 	.header-user-info .header-user-info-lang{
 		display: none;
 	}
-	.basket-box.active .basket-services-box,
+	.header-user-info-basket.active .basket-services-box,
 	#overlay{
 		animation: openright 0s;
 	}
