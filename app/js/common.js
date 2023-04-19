@@ -30,7 +30,7 @@ function initCloseBlock(){
     $('.top-bar').css('display','none');
     $('body').toggleClass('no-top-bar');
     return false;
-  });
+  })
 }
 function initFixedHeader() {
   window.onscroll = function() {myFunction()};
@@ -61,7 +61,7 @@ function initOpenBasket(){
     return false;
   });
   $(document).click(function(event) {
-    if ($(event.target).closest(".basket-box .basket-services-box").length) return;
+    if ($(event.target).closest("li.header-user-info-basket .basket-services-box").length) return;
     $("li.header-user-info-basket").removeClass('active');
     $('body').removeClass('open-basket').trigger('mini_cart_close');
     event.stopPropagation();
@@ -189,7 +189,7 @@ function initSlickSliderProduct() {
     asNavFor: '.slider-for',
     arrows: false,
     dots: false,
-    centerMode: true,
+    // centerMode: true,
     focusOnSelect: true,
     responsive: [
       {
