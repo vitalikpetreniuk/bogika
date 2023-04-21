@@ -230,7 +230,7 @@ function initCustomSelect(){
     });
 }
 function initOpenBlock(){
-  $('.expanded-opener').on('click', function() {
+  $('body').on('click', '.expanded-opener', function() {
     $(this).closest('.filter-options-item').toggleClass('open-drop');
     $(this).closest('.hide-text').toggleClass('open');
     $(this).siblings('.expanded').slideToggle();
@@ -241,7 +241,7 @@ function initOpenBlock(){
     $(this).siblings('.nav-menu .sub-menu').slideToggle();
     return false;
   });
-  $('.custom-select.multiple .expanded-opener').on('click', function() {
+  $('body').on('click', '.custom-select.multiple .expanded-opener',function() {
     $(this).closest('.custom-select.multiple').toggleClass('open');
     $(this).siblings('.custom-select.multiple .filter-options-item').slideToggle();
     return false;
