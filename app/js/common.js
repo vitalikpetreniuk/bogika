@@ -304,16 +304,15 @@ function initTabs(){
     $(this)
       .addClass('active').siblings().removeClass('active')
       .closest('.tabset').find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-      return false;
+    $('#customer_details').addClass('active').find('.wc-ukr-shipping-np-fields').find('.wc-ukrposhta-up-fields').find('.wc-pickup-fields');
   });
   if(window.matchMedia("screen and (max-width: 767px)").matches==true) {
-      $('.product-info-description .tab-control a').addClass('accordion-mobile-opener');
-      $('.accordion-mobile-opener').on('click', function() {
-        $(this).closest('.product-info-description .tab-control > li').toggleClass('open');
-        $(this).siblings('.accordion-mobile-slide').slideToggle();
-        return false;
-      });
-    } 
+    $('.product-info-description .tabset').addClass('accordion-mobile');
+    $('.product-info-description .accordion-mobile-opener').on('click', function() {
+      $(this).closest('.product-info-description .tab').toggleClass('open');
+      return false;
+    });
+  } 
 }
 function initRatingStars() {
   ratingForm = document.getElementById("ratingForm");

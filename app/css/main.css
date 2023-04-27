@@ -537,6 +537,7 @@ input.btn:hover,
 	color: #96460A;
 	padding: 5px 8px;
 	border-radius: 30px;
+	text-align: center;
 }
 .nav-menu .sub-menu a:hover,
 .nav-menu .sub-menu .current a{
@@ -660,7 +661,7 @@ input.btn:hover,
 	background: #EDDBC0;
 	width: 475px;
 	height: 100vh;
-	padding: 20px 30px 170px;
+	padding: 50px 30px 170px;
 	z-index: 51;
 }
 .basket-services-box h3{
@@ -1244,8 +1245,8 @@ section{
 }
 .goods-list .goods-box .icon-heart{
 	position: absolute;
-	top: 16px;
-	right: 20px;
+	top: -15px;
+	right: 50px;
 	font-size: 0;
 	width: 18px;
 	height: 18px;
@@ -2719,7 +2720,8 @@ section{
 }
 .basket-block .basket-item-quantity .basket-item-price:only-child{
 	position: static;
-	text-align: left;
+	text-align: right;
+	width: 100%;
 }
 .basket-block .basket-services li:last-child{
 	border: none;
@@ -2805,7 +2807,7 @@ section{
 .order-block .select2-container--default .select2-selection--single .select2-selection__arrow b{
 	margin-left: -10px;
 }
-.order-block .btn{
+#payment .place-order .btn{
 	min-width: 276px;
 }
 /* TABS */
@@ -2836,6 +2838,7 @@ section{
 	background: #EDDBC0;
 	border-radius: 8px;
 	text-align: center;
+	cursor: pointer;
 }
 .tab-control a:hover,
 .tab-control label:hover,
@@ -3389,6 +3392,8 @@ section{
 	text-decoration: line-through;
 }
 .product-info-box .btn{
+	display: inline-block;
+	margin: 0;
 	min-width: 164px;
 }
 .product-info-box input.btn{
@@ -3423,7 +3428,7 @@ section{
 	max-width: 700px;
 }
 .product-info-description .tabset .btn.default,
-.product-info-description .tabset .accordion-mobile-slide{
+.product-info-description .tabset .accordion-mobile-opener{
 	display: none;
 }
 .product-info-description .tab-control li{
@@ -3893,9 +3898,8 @@ section{
 .reviews-list-block.open .comment-respond{
 	display: block;
 }
-.header-main .product-remove{
-	font-size: 0;
-	right: 7px;
+#bogika-mini-cart .product-remove{
+	right: 10px;
 }
 .header-main .product-remove a{
 	font-size: 0;
@@ -4140,6 +4144,58 @@ th.label .woo-selected-variation-item-name{
 .woocommerce-pagination a{
 	margin: 0 20px 0 0;
 }
+.premmerce-filter-ajax-container,
+.alg-wc-wl-thumb-btn-abs{
+	width: 100%;
+	position: relative;
+}
+#review_form_wrapper{
+	padding-top: 0;
+}
+#review_form_wrapper .user-form{
+	padding: 0 32px;
+}
+.mCustomScrollBox{
+	height: 670px;
+}
+a.wp-element-button{
+	display: block;
+	margin: 15px 10px 0;
+}
+.woocommerce-order .order_details,
+.woocommerce-order .order_details .wc-item-meta{
+	padding: 0;
+	list-style: none;
+}
+.woocommerce-order .order_details .wc-item-meta{
+	margin: 0;
+}
+.woocommerce-order .order_details .wc-item-meta li{
+	display: flex;
+	align-items: center;
+}
+.woocommerce-order .order_details tfoot tr,
+.woocommerce-order .order_details .order_item{
+	background: #EDDBC0;
+	border-radius: 4px;
+}
+.woocommerce-order .order_details tfoot tr:nth-child(2n),
+.woocommerce-order .order_details .order_item:nth-child(2n) {
+    background: none;
+}
+.woocommerce-order .order_details th,
+.woocommerce-order .order_details td{
+	padding: 10px 15px;
+}
+.woocommerce-order .order_details .product-name a{
+	text-decoration: none;
+}
+.woocommerce-order .order_details .wc-item-meta .wc-item-meta-label{
+	margin-right: 10px;
+}
+.woocommerce-order .order_details .wc-item-meta p{
+	margin: 0;
+}
 @media (prefers-reduced-motion:no-preference){:root{scroll-behavior:auto}}
 @media (min-width: 1281px) {
 	.slider .wrap-img{
@@ -4273,6 +4329,9 @@ th.label .woo-selected-variation-item-name{
 	}
 	.search-result-list .text{
 		padding-right: 15px;
+	}
+	.goods-list .goods-box .icon-heart{
+		right: 60px;
 	}
 }
 @media screen and (width: 1024px) and (min-height: 500px) {
@@ -4958,6 +5017,13 @@ th.label .woo-selected-variation-item-name{
 	.filter--style-premmerce .filter__checkgroup-title {
 		white-space: normal;
 	}
+	.goods-list .goods-box .icon-heart{
+		right: 45px;
+	}
+	#review_form,
+	#review_form_wrapper .user-form{
+		padding: 0;
+	}
 }
 @media (max-width: 767px) {
 	h1, .h2{
@@ -4965,6 +5031,9 @@ th.label .woo-selected-variation-item-name{
 	}
 	h1 {
 		margin: 0 0 34px;
+	}
+	.mCustomScrollBox{
+		height: 500px;
 	}
 	.title-large{
 		font-size: 28px;
@@ -5811,51 +5880,21 @@ th.label .woo-selected-variation-item-name{
 	#review_form .button{
 		padding: 0;
 	}
-	.product-info-description .tab-body{
+	.product-info-description .tab-control{
 		display: none;
 	}
-	.product-info-description .tab-control li{
-		width: 100%;
+	.product-info-description .tab,
+	.product-info-description .tabset .accordion-mobile-opener{
+		display: block;
+	}
+	.product-info-description .tab{
 		margin: 0 0 25px;
 	}
-	.product-info-description .tab-control a, 
-	.product-info-description .tab-control label,
-	.product-info-description .tab-control li.active a, 
-	.product-info-description .tab-control li.active label,
-	.product-info-description .tab-control a:hover, 
-	.product-info-description .tab-control label:hover{
-		text-align: left;
-		font-size: 20px;
-		line-height: 28px;
-		background: #EDDBC0;
-		padding: 23px 20px;
-		padding-right: 70px;
-		position: relative;
-	}
-	.product-info-description .tab-control a:hover, 
-	.product-info-description .tab-control li.active a, 
-	.product-info-description .tab-control label:hover, 
-	.product-info-description .tab-control li.active label{
-		text-decoration: none;
-	}
-	.product-info-description .tab-control a:before, 
-	.product-info-description .tab-control label:before {
-		content: '';
-		position: absolute;
-		top: 50%;
-		right: 33px;
-		transform: translateY(-50%);
-		width: 10px;
-		height: 7px;
-		background: url(../img/arrow-down.svg) no-repeat;
-		transition: .3s;
-	}
-	.product-info-description .tab-control .open .accordion-mobile-opener:before{
+	.product-info-description .tab.open .accordion-mobile-opener:before{
 		transform: rotate(180deg);
 	}
-	.product-info-description .accordion-mobile-slide{
-		background: #EDDBC0;
-		padding: 0 20px 22px;
+	a.wp-element-button{
+		text-align: center;
 	}
 }
 @media (max-width: 479px) {
@@ -5895,6 +5934,6 @@ th.label .woo-selected-variation-item-name{
 		min-height: 0;
 	}
 	.basket-services-result{
-		padding-bottom: 100px;
+		padding-bottom: 20px;
 	}
 }
