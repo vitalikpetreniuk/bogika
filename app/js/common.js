@@ -284,9 +284,8 @@ function initAnchorMenu(){
 }
 function initPlayVideo() {
   $('.playpause').click(function () {
-    $('video').attr('controls', '');
-    $('video')[0].play();
-    $('.video').toggleClass('play');
+    $(this).parent().find('video').attr('controls', '')[0].play();
+    $(this).parents('.video').toggleClass('play');
     $(this).hide();
   });
 }

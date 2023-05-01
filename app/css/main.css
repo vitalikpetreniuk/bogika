@@ -1889,6 +1889,9 @@ section{
 	-ms-user-select: none;
 	user-select: none;
 }
+.filter--style-premmerce .filter__checkgroup-title{
+	max-width: 200px;
+}
 .checkbox-container input {
 	position: absolute;
 	opacity: 0;
@@ -4409,6 +4412,9 @@ a.wp-element-button{
 	-webkit-line-clamp: 1;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
+}
+.woocommerce-checkout .woocommerce-account-fields{
+	display: none;
 }
 @media (prefers-reduced-motion:no-preference){:root{scroll-behavior:auto}}
 @media (min-width: 1281px) {
