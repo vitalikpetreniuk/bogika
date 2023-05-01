@@ -22,6 +22,7 @@ $(document).ready(function() {
   initTabs();
   initRatingStars();
   initLightBox();
+  initFancyBox();
   initVerticalScroll();
 });
 
@@ -301,7 +302,6 @@ function initCustomTextarea(){
 }
 function initTabs(){
   $('body').on('click', '.tabset .tab-control li:not(.active)', function(e) {
-    // e.preventDefault();
     $(this)
       .addClass('active').siblings().removeClass('active')
       .closest('.tabset').find('.tab').removeClass('active').eq($(this).index()).addClass('active');
@@ -334,14 +334,14 @@ function initLightBox(){
     'wrapAround': true
   })
 }
+function initFancyBox(){
+  $('.fancybox').fancybox();
+}
 function initVerticalScroll() {
   $(".mCustomScrollbar").mCustomScrollbar({
     axis:"y",
     advanced:{autoExpandHorizontalScroll:false}
   });
-  if(window.matchMedia("screen and (min-width: 1024px)").matches==true) {
-    $('.cart-page.cart .basket-services').addClass('mCustomScrollbar');
-  }
 }
 if (!document.fullscreenElement) {
   document.documentElement.requestFullscreen().catch((e)=>{});
