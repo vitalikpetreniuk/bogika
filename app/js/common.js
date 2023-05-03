@@ -24,7 +24,6 @@ $(document).ready(function() {
   initLightBox();
   initFancyBox();
   initVerticalScroll();
-  initDownloadFile();
 });
 
 function initCloseBlock(){
@@ -346,8 +345,8 @@ function initVerticalScroll() {
 function initDownloadFile(){
   var copyText = document.getElementById("download-file");
   copyText.select();
-  document.execCommand("copy");
-  alert("Copied the text: " + copyText.value);
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+  navigator.clipboard.writeText(copyText.value);
 }
 if (!document.fullscreenElement) {
   document.documentElement.requestFullscreen().catch((e)=>{});
