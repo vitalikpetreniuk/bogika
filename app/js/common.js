@@ -210,7 +210,6 @@ function initSlickSliderProduct() {
 }
 function initCustomSelect(){
   $('.custom-select select').select2();
-  $('.goods-select__mobile select').select2();
   $(".js-select2").select2({
       closeOnSelect : false,
       placeholder : "Групи товарів",
