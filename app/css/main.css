@@ -2029,7 +2029,7 @@ section{
 	font-weight: normal;
 }
 .select2-container .select2-selection--single .select2-selection__rendered{
-	font-weight: normal;
+	/* font-weight: normal; */
 	padding-left: 10px;
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow b{
@@ -4823,7 +4823,7 @@ a.wp-element-button{
 		margin: 0 0 0 18px;
 	}
 	.goods-select-block .custom-select.multiple{
-		width: auto;
+		/* width: auto; */
 		min-width: 178px;
 		margin: 0;
 	}
@@ -6232,5 +6232,26 @@ a.wp-element-button{
 	}
 	#bogika-mini-cart .basket-services{
 		padding-bottom: 60%;
+	}
+}
+
+.custom-select-block-mobile {
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.goods-select-sort-button.mobile .goods-select__mobile .select2-selection--single {
+  background: #F4C55C;
+  color: #96460A !important;
+  border-radius: 4px;
+  border: none;
+  /* font: 500 16px/24px GothamPro; */
+  font: 500 16px/24px GothamPro, sans-serif;
+}
+
+@media (max-width: 500px) {
+
+	.goods-select-block .custom-select.multiple,
+	.goods-select-block .goods-select-sort-button.mobile {
+		width: 100%;
 	}
 }
