@@ -1,0 +1,100 @@
+.admin-actions-cont {
+    padding: 6px 10px;
+}
+
+.user-contact-actions-title {
+    margin-bottom: 7px;
+}
+
+.user-contact-actions-button {
+    margin-bottom: 12px;
+}
+
+.user-contact-actions-button .button {
+    margin-right: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+#sms-integration .radio-field {
+    margin-bottom: 8px;
+}
+
+#sms-integration .radio-field [type=radio]:checked::before {
+    margin: 3.5px;
+}
+
+#sms-integration textarea {
+    width: 100%;
+    height: 50px;
+}
+
+.sms-integration-status-success {
+    color: green;
+}
+
+.sms-integration-status-error {
+    color: red;
+}
+
+/* ================================================ */
+
+table.woocommerce_order_items,
+table.woocommerce_order_items tbody,
+.woocommerce_order_items thead {
+    display: block;
+}
+
+.woocommerce_order_items .item,
+.woocommerce_order_items .shipping {
+    display: flex;
+    width: 100%;
+    min-width: 100%;
+}
+
+/* .woocommerce_order_items td {
+	width: auto!important;
+} */
+
+/* .woocommerce_order_items td.thumb {
+	width: 1%!important;
+} */
+
+.woocommerce_order_items thead tr {
+    display: flex;
+    align-items: center;
+}
+
+.woocommerce_order_items thead tr th:first-child,
+.woocommerce_order_items td.index {
+    flex: 0 0 65px;
+}
+
+.woocommerce_order_items thead tr th:nth-child(2),
+.woocommerce_order_items td.name {
+    flex: 1 1 auto;
+}
+
+.woocommerce_order_items thead tr th:nth-child(3),
+.woocommerce_order_items td.item_cost,
+.woocommerce_order_items thead tr th:nth-child(4),
+.woocommerce_order_items td.quantity,
+.woocommerce_order_items thead tr th:nth-child(5),
+.woocommerce_order_items td.line_cost {
+    flex: 0 0 74px;
+}
+
+.linktoliqpay {
+    display: none;
+}
+
+.linktoliqpay.show {
+    display: block;
+}
+
+.button.b-loading, .button.b-loading:focus {
+    background-size: 20px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; background: rgb(255, 255, 255); display: block; shape-rendering: auto;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'%3E%3Cg transform='rotate(0 50 50)'%3E%3Crect x='47' y='24' rx='3' ry='6' width='6' height='12' fill='%2396460a'%3E%3Canimate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.9166666666666666s' repeatCount='indefinite'%3E%3C/animate%3E%3C/rect%3E%3C/g%3E%3Cg transform='rotate(30 50 50)'%3E%3Crect x='47' y='24' rx='3' ry='6' width='6' height='12' fill='%2396460a'%3E%3Canimate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.8333333333333334s' repeatCount='indefinite'%3E%3C/animate%3E%3C/rect%3E%3C/g%3E%3Cg transform='rotate(60 50 50)'%3E%3Crect x='47' y='24' rx='3' ry='6' width='6' height='12' fill='%2396460a'%3E%3Canimate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.75s' repeatCount='indefinite'%3E%3C/animate%3E%3C/rect%3E%3C/g%3E%3Cg transform='rotate(90 50 50)'%3E%3Crect x='47' y='24' rx='3' ry='6' width='6' height='12' fill='%2396460a'%3E%3Canimate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.6666666666666666s' repeatCount='indefinite'%3E%3C/animate%3E%3C/rect%3E%3C/g%3E%3Cg transform='rotate(120 50 50)'%3E%3Crect x='47' y='24' rx='3' ry='6' width='6' height='12' fill='%2396460a'%3E%3Canimate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.5833333333333334s' repeatCount='indefinite'%3E%3C/animate%3E%3C/rect%3E%3C/g%3E%3Cg transform='rotate(150 50 50)'%3E%3Crect x='47' y='24' rx='3' ry='6' width='6' height='12' fill='%2396460a'%3E%3Canimate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.5s' repeatCount='indefinite'%3E%3C/animate%3E%3C/rect%3E%3C/g%3E%3Cg transform='rotate(180 50 50)'%3E%3Crect x='47' y='24' rx='3' ry='6' width='6' height='12' fill='%2396460a'%3E%3Canimate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.4166666666666667s' repeatCount='indefinite'%3E%3C/animate%3E%3C/rect%3E%3C/g%3E%3Cg transform='rotate(210 50 50)'%3E%3Crect x='47' y='24' rx='3' ry='6' width='6' height='12' fill='%2396460a'%3E%3Canimate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.3333333333333333s' repeatCount='indefinite'%3E%3C/animate%3E%3C/rect%3E%3C/g%3E%3Cg transform='rotate(240 50 50)'%3E%3Crect x='47' y='24' rx='3' ry='6' width='6' height='12' fill='%2396460a'%3E%3Canimate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.25s' repeatCount='indefinite'%3E%3C/animate%3E%3C/rect%3E%3C/g%3E%3Cg transform='rotate(270 50 50)'%3E%3Crect x='47' y='24' rx='3' ry='6' width='6' height='12' fill='%2396460a'%3E%3Canimate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.16666666666666666s' repeatCount='indefinite'%3E%3C/animate%3E%3C/rect%3E%3C/g%3E%3Cg transform='rotate(300 50 50)'%3E%3Crect x='47' y='24' rx='3' ry='6' width='6' height='12' fill='%2396460a'%3E%3Canimate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='-0.08333333333333333s' repeatCount='indefinite'%3E%3C/animate%3E%3C/rect%3E%3C/g%3E%3Cg transform='rotate(330 50 50)'%3E%3Crect x='47' y='24' rx='3' ry='6' width='6' height='12' fill='%2396460a'%3E%3Canimate attributeName='opacity' values='1;0' keyTimes='0;1' dur='1s' begin='0s' repeatCount='indefinite'%3E%3C/animate%3E%3C/rect%3E%3C/g%3E%3C!-- %5Bldio%5D s --%3E%3C/svg%3E");
+    padding-right: 20px
+}

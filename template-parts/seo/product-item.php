@@ -1,0 +1,1 @@
+{item_name: "<?= $args['title'] ?? get_the_title() ?>",item_brand: "Bogika", price: <?= $args['price'] ?? 1 ?>,item_category: "<?= get_the_terms( $args['id'] ?? get_the_ID(), 'product_cat' )[0]->name ?? $args['category'] ?>",item_id:"<?= $args['id'] ?? get_the_ID() ?>",quantity: <?= $args['quantity'] ?? 1 ?>}
